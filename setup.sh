@@ -42,8 +42,8 @@ function create_symlinks {
 echo ""
 
 install_powerline_fonts
-install_dein
 install_vim
+install_dein
 create_symlinks
 
 

@@ -1,0 +1,45 @@
+alias tc='top -o cpu' # cpu
+alias tm='top -o vsize' # memory
+alias rf="source ~/.bash_profile"
+alias code="cd ~/Documents/Code"
+alias fs="cd ~/Dropbox/Code/rubymotion/2014/FS"
+alias notes="subl ~/Dropbox/Notes"
+
+# --------------------------------
+# GIT
+# --------------------------------
+alias gch="git checkout"
+alias gco="git add . && git add -u && git commit -m"
+alias gd="git diff | subl -"
+alias gp="git push"
+alias gs="git status"
+
+if [ -f ~/Dropbox/bin/dotfiles/bash/alias-completion-wrapper.bash ]; then
+  . ~/Dropbox/bin/dotfiles/bash/alias-completion-wrapper.bash
+  make-completion-wrapper _git _git_checkout_mine git checkout
+  complete -o bashdefault -o default -o nospace -F _git_checkout_mine gch
+fi
+
+# --------------------------------
+# RUBY & RAILS
+# --------------------------------
+alias be="bundle exec"
+alias bem="be rake db:migrate && be rake db:test:prepare"
+alias ber="bundle exec rspec"
+
+
+function take {
+  mkdir $1
+  cd $1
+}
+
+function tree {
+  find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+}
+
+function cl () {
+  cd "$@" && ls
+}
+
+alias irbs="irb --simple-prompt"
+alias vim='/usr/local/bin/vim'

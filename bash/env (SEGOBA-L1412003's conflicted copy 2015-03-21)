@@ -1,0 +1,13 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export NODE_PATH="/usr/local/lib/node"
+export GOPATH="/Users/e0/Dropbox/Code/golang"
+export PATH=/Users/e0/.gem/ruby/2.1.3/bin:/Users/e0/.rubies/ruby-2.1.3/lib/ruby/gems/2.1.0/bin:/Users/e0/.rubies/ruby-2.1.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
+
+export MONGOHQ_URL="mongodb://heroku:Pyr6vj9IwARuNEQinKBs-wSu2IbQqwUUJZIXR4ak9stUAzUOgyP4b4auGOY-2gAZ5ub1_M0Ex4Sw8Fb72bm9gw@oceanic.mongohq.com:10073/app23639867"
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
+chruby ruby-2.1.3

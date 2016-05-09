@@ -1,0 +1,9 @@
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+# PS1="\n\u:\w \[$EBLACK\]\[$YELLOW\]\$(parse_git_branch)\[$NO_COLOR\] \n→ "
+PS1="\n\w \[$EBLACK\]\[$YELLOW\]\$(parse_git_branch)\[$NO_COLOR\] \n> "
+
+function parse_git_branch {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}

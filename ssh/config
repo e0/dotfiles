@@ -1,9 +1,0 @@
-Host linode
-    HostName 173.255.224.188
-    User e0
-
-Host do
-   HostName 162.243.254.33
-   User root
-
-

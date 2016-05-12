@@ -24,6 +24,13 @@ function install_vim {
   echo -e "\t\tDone."
 }
 
+function install_vim_solarized_theme {
+  echo -n "=> Install vim Solarized theme ... \n"
+  mkdir ~/.vim/colors
+  curl -o ~/.vim/colors/solarized.vim https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim
+  echo -e "\t\tDone."
+}
+
 function create_symlinks {
   echo -n "=> Creating symlinks...\n"
 
@@ -43,6 +50,7 @@ echo ""
 
 install_powerline_fonts
 install_vim
+install_vim_solarized_theme
 install_dein
 create_symlinks
 

@@ -21,6 +21,7 @@ filetype plugin indent on
 syntax enable
 set background=light
 colorscheme solarized
+set number
 
 set tabstop=2
 set shiftwidth=2

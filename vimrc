@@ -11,8 +11,9 @@ call dein#begin(expand('~/dotfiles/vim/dein'))
 call dein#add('Shougo/dein.vim')
 
 call dein#add('scrooloose/nerdtree')
-call dein#add('kien/ctrlp.vim')
+call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('ElmCast/elm-vim')
+call dein#add('terryma/vim-multiple-cursors')
 
 call dein#end()
 

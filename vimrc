@@ -14,6 +14,7 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('ElmCast/elm-vim')
 call dein#add('terryma/vim-multiple-cursors')
+call dein#add('tpope/vim-sleuth')
 
 call dein#end()
 
@@ -24,10 +25,6 @@ set background=light
 colorscheme solarized
 set number
 
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
 set backspace=indent,eol,start
 
 map <silent> <C-n> :NERDTreeToggle<CR>

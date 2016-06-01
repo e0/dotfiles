@@ -50,9 +50,9 @@ echo ""
 
 install_powerline_fonts
 install_vim
+create_symlinks
 install_vim_solarized_theme
 install_dein
-create_symlinks
 
 
 echo -e "\nAll done!"

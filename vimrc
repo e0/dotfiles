@@ -30,3 +30,4 @@ set backspace=indent,eol,start
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 let g:elm_format_autosave = 1
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|deps\|_build'

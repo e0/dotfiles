@@ -27,6 +27,8 @@ set number
 
 set backspace=indent,eol,start
 
+set backupcopy=yes
+
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 let g:elm_format_autosave = 1

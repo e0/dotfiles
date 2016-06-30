@@ -62,6 +62,7 @@ export DOTFILES=$HOME/.dotfiles
 
 source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/bash/*
+source ~/dotfiles/fn.sh
 
 
 # You may need to manually set your language environment

@@ -44,3 +44,4 @@ function cl () {
 alias irbs="irb --simple-prompt"
 alias vim='/usr/local/bin/vim'
 alias emacs='/usr/local/bin/emacs'
+alias em='/usr/local/bin/emacs -nw'

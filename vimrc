@@ -16,7 +16,7 @@ call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('ElmCast/elm-vim')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('tpope/vim-sleuth')
-call dein#add('neovimhaskell/haskell-vim')
+call dein#add('elixir-lang/vim-elixir')
 
 call dein#end()
 

@@ -23,7 +23,7 @@ call dein#end()
 syntax enable
 set expandtab
 filetype plugin indent on
-set background=light
+set background=dark
 colorscheme solarized
 set number
 
@@ -45,19 +45,3 @@ let g:syntastic_check_on_wq = 0
 let g:elm_format_autosave = 1
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|deps\|_build'
 
-let g:haskell_enable_quantification = 1
-let g:haskell_enable_recursivedo = 1
-let g:haskell_enable_arrowsyntax = 1
-let g:haskell_enable_pattern_synonyms = 1
-let g:haskell_enable_typeroles = 1
-let g:haskell_enable_static_pointers = 1
-let g:haskell_classic_highlighting = 1
-
-let g:haskell_indent_if = 3
-let g:haskell_indent_case = 2
-let g:haskell_indent_let = 4
-let g:haskell_indent_where = 6
-let g:haskell_indent_do = 3
-let g:haskell_indent_in = 1
-let g:haskell_indent_guard = 2
-let g:cabal_indent_section = 2

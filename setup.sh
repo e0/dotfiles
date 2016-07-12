@@ -48,7 +48,7 @@ function create_symlinks {
 
 echo ""
 
-install_powerline_fonts
+#install_powerline_fonts
 install_vim
 create_symlinks
 install_vim_solarized_theme

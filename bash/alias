@@ -1,8 +1,7 @@
 alias tc='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
 alias rf="source ~/.bash_profile"
-alias code="cd ~/Documents/Code"
-alias fs="cd ~/Dropbox/Code/rubymotion/2014/FS"
+alias code="cd ~/Documents/code"
 alias notes="subl ~/Dropbox/Notes"
 
 # --------------------------------
@@ -40,8 +39,3 @@ function tree {
 function cl () {
   cd "$@" && ls
 }
-
-alias irbs="irb --simple-prompt"
-alias vim='/usr/local/bin/vim'
-alias emacs='/usr/local/bin/emacs'
-alias em='/usr/local/bin/emacs -nw'

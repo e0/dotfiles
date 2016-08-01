@@ -12,7 +12,7 @@ alias gch="git checkout"
 alias gco="git add . && git add -u && git commit -m"
 alias gd="git diff | subl -"
 alias gp="git push"
-alias gs="git status"
+alias gst="git status"
 
 if [ -f ~/Dropbox/bin/dotfiles/bash/alias-completion-wrapper.bash ]; then
   . ~/Dropbox/bin/dotfiles/bash/alias-completion-wrapper.bash

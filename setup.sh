@@ -37,10 +37,12 @@ create_symlinks () {
   rm ~/.zshrc
   rm -rf ~/.vim
   rm ~/.vimrc
+  rm ~/.Xmodmap
 
   ln -s ~/dotfiles/zshrc ~/.zshrc
   ln -s ~/dotfiles/vimrc ~/.vimrc
   ln -s ~/dotfiles/vim ~/.vim
+  ln -s ~/dotfiles/Xmodmap ~/.Xmodmap
 
   echo -e "\t\tDone."
 }

@@ -2,7 +2,8 @@ alias tc='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
 alias rf="source ~/.bash_profile"
 alias code="cd ~/Documents/code"
-alias notes="subl ~/Dropbox/Notes"
+alias c="clear"
+alias x="xbacklight -set"
 
 # --------------------------------
 # GIT

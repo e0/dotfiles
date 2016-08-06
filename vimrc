@@ -23,7 +23,7 @@ call dein#end()
 syntax enable
 set expandtab
 filetype plugin indent on
-set background=dark
+set background=light
 colorscheme solarized
 set number
 

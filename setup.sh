@@ -37,11 +37,13 @@ create_symlinks () {
   rm ~/.zshrc
   rm -rf ~/.vim
   rm ~/.vimrc
+  rm ~/.i3
   rm ~/.Xmodmap
 
   ln -s ~/dotfiles/zshrc ~/.zshrc
   ln -s ~/dotfiles/vimrc ~/.vimrc
   ln -s ~/dotfiles/vim ~/.vim
+  ln -s ~/dotfiles/i3 ~/.i3
   ln -s ~/dotfiles/Xmodmap ~/.Xmodmap
 
   echo -e "\t\tDone."
@@ -52,8 +54,8 @@ echo ""
 
 #install_powerline_fonts
 #install_vim
-create_symlinks
-install_vim_solarized_theme
+#create_symlinks
+#install_vim_solarized_theme
 install_dein
 
 

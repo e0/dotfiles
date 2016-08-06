@@ -1,4 +1,5 @@
-pointer = 1 2 3 5 4 6 7 8 9 10 11 12
+pointer = 1 2 3 5 4 6 7 8 9 10
+
 ! Switch caps lock and (left) control
 remove Lock = Caps_Lock
 remove Control = Control_L

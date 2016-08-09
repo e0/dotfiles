@@ -1,7 +1,5 @@
 ## Prerequisites:
 
-- iTerm
-- homebrew
 - Git
 - oh-my-zsh
 

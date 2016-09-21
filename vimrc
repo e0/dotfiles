@@ -10,7 +10,6 @@ call dein#begin(expand('~/dotfiles/vim/dein'))
 
 call dein#add('Shougo/dein.vim')
 
-call dein#add('scrooloose/nerdtree')
 call dein#add('scrooloose/syntastic')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('ElmCast/elm-vim')

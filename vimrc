@@ -20,6 +20,9 @@ call dein#add('elixir-lang/vim-elixir')
 call dein#end()
 
 syntax enable
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 filetype plugin indent on
 set background=light
@@ -40,7 +43,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 
 let g:elm_format_autosave = 1
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|deps\|_build'
+
 

@@ -16,6 +16,7 @@ call dein#add('ElmCast/elm-vim')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('tpope/vim-sleuth')
 call dein#add('elixir-lang/vim-elixir')
+call dein#add('joukevandermaas/vim-ember-hbs')
 
 call dein#end()
 

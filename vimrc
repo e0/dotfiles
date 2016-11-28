@@ -38,9 +38,15 @@ colorscheme solarized
 set backspace=indent,eol,start
 set backupcopy=yes
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/](\.git|node_modules|\.sass-cache|bower_components|bui‌​ld)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 let g:elm_format_autosave = 1
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|deps\|_build'
 
 let g:ariline#extensions#tabline#enabled = 1
 let g:airline_theme = 'solarized'

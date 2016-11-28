@@ -15,6 +15,7 @@ call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('terryma/vim-multiple-cursors')
+call dein#add('iCyMind/NeoSolarized')
 
 call dein#add('tpope/vim-sleuth')
 call dein#add('elixir-lang/vim-elixir')
@@ -27,13 +28,13 @@ syntax enable
 set number
 filetype plugin indent on
 
+set termguicolors
+colorscheme NeoSolarized
+
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-
-set background=light
-colorscheme solarized
 
 set backspace=indent,eol,start
 set backupcopy=yes

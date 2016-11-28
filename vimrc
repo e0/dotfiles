@@ -10,7 +10,9 @@ call dein#begin(expand('~/dotfiles/vim/dein'))
 
 call dein#add('Shougo/dein.vim')
 
-call dein#add('scrooloose/syntastic')
+call dein#add('neomake/neomake')
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('ElmCast/elm-vim')
 call dein#add('terryma/vim-multiple-cursors')
@@ -37,16 +39,10 @@ set backupcopy=yes
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 
 let g:elm_format_autosave = 1
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|deps\|_build'
 
-
+let g:ariline#extensions#tabline#enabled = 1
+let g:airline_theme = 'solarized'

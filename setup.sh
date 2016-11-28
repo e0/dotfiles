@@ -18,9 +18,9 @@ function install_dein {
   echo -e "\t\tDone."
 }
 
-function install_vim {
-  echo -n "=> Installing vim ...\n"
-  brew install vim
+function install_neovim {
+  echo -n "=> Installing neovim ...\n"
+  brew install neovim/neovim/neovim
   echo -e "\t\tDone."
 }
 
@@ -39,8 +39,8 @@ function create_symlinks {
   rm ~/.vimrc
 
   ln -s ~/dotfiles/zshrc ~/.zshrc
-  ln -s ~/dotfiles/vimrc ~/.vimrc
-  ln -s ~/dotfiles/vim ~/.vim
+  ln -s ~/dotfiles/vim ~/.config/nvim
+  ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
 
   echo -e "\t\tDone."
 }
@@ -49,7 +49,7 @@ function create_symlinks {
 echo ""
 
 #install_powerline_fonts
-install_vim
+install_neovim
 create_symlinks
 install_vim_solarized_theme
 install_dein

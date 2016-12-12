@@ -21,6 +21,7 @@ call dein#add('tpope/vim-sleuth')
 call dein#add('elixir-lang/vim-elixir')
 call dein#add('ElmCast/elm-vim')
 call dein#add('joukevandermaas/vim-ember-hbs')
+call dein#add('leafgarland/typescript-vim')
 
 call dein#end()
 

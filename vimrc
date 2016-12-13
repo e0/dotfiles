@@ -30,7 +30,6 @@ syntax enable
 set number
 filetype plugin indent on
 
-set termguicolors
 colorscheme NeoSolarized
 
 set tabstop=4

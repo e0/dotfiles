@@ -23,6 +23,7 @@ call dein#add('ElmCast/elm-vim')
 call dein#add('joukevandermaas/vim-ember-hbs')
 call dein#add('leafgarland/typescript-vim')
 call dein#add('digitaltoad/vim-pug')
+call dein#add('keith/swift.vim')
 
 call dein#end()
 

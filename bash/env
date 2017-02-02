@@ -3,4 +3,4 @@ export LANG=en_US.UTF-8
 export GOPATH=$HOME/Documents/Code/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="/usr/local/bin:$PATH"
-export PATH=$PATH:/Users/e0/dotfiles/bin
+export PATH=$PATH:/Users/shan/dotfiles/bin

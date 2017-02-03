@@ -16,6 +16,7 @@ call dein#add('vim-airline/vim-airline-themes')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('iCyMind/NeoSolarized')
+call dein#add('editorconfig/editorconfig-vim')
 
 call dein#add('tpope/vim-sleuth')
 call dein#add('elixir-lang/vim-elixir')
@@ -24,6 +25,7 @@ call dein#add('joukevandermaas/vim-ember-hbs')
 call dein#add('leafgarland/typescript-vim')
 call dein#add('digitaltoad/vim-pug')
 call dein#add('keith/swift.vim')
+call dein#add('posva/vim-vue')
 
 call dein#end()
 

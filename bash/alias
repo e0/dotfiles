@@ -34,3 +34,5 @@ function cl () {
 if type nvim > /dev/null 2>&1; then
     alias vim='nvim'
 fi
+
+alias dockup="source /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh"

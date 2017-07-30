@@ -17,6 +17,7 @@ call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('iCyMind/NeoSolarized')
 call dein#add('editorconfig/editorconfig-vim')
+call dein#add('pbrisbin/vim-mkdir')
 
 call dein#add('tpope/vim-sleuth')
 call dein#add('elixir-lang/vim-elixir')
@@ -34,6 +35,7 @@ set number
 filetype plugin indent on
 
 colorscheme NeoSolarized
+"set background=dark
 
 set tabstop=4
 set shiftwidth=4

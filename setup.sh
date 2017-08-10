@@ -20,6 +20,7 @@ function install_dein {
 
 function install_neovim {
   echo -n "=> Installing neovim ...\n"
+  mkdir ~/.config
   brew install neovim/neovim/neovim
   echo -e "\t\tDone."
 }
@@ -45,6 +46,11 @@ function create_symlinks {
   echo -e "\t\tDone."
 }
 
+function install_yarn {
+  echo -n "=> Installing yarn ...\n"
+  brew install yarn
+  echo -e "\t\tDone."
+}
 
 echo ""
 
@@ -53,6 +59,7 @@ install_neovim
 create_symlinks
 install_vim_solarized_theme
 install_dein
+install_yarn
 
 
 echo -e "\nAll done!"

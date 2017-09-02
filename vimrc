@@ -27,6 +27,8 @@ call dein#add('leafgarland/typescript-vim')
 call dein#add('digitaltoad/vim-pug')
 call dein#add('keith/swift.vim')
 call dein#add('posva/vim-vue')
+call dein#add('pangloss/vim-javascript')
+call dein#add('mxw/vim-jsx')
 
 call dein#end()
 
@@ -58,3 +60,5 @@ let g:elm_format_autosave = 1
 
 let g:ariline#extensions#tabline#enabled = 1
 let g:airline_theme = 'solarized'
+
+let g:jsx_ext_required = 0

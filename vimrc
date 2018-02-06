@@ -18,6 +18,7 @@ call dein#add('terryma/vim-multiple-cursors')
 call dein#add('iCyMind/NeoSolarized')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('pbrisbin/vim-mkdir')
+call dein#add('ap/vim-css-color')
 
 call dein#add('tpope/vim-sleuth')
 call dein#add('elixir-lang/vim-elixir')

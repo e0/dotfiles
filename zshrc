@@ -92,3 +92,8 @@ source ~/dotfiles/fn.sh
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/e0/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/e0/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/e0/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/e0/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

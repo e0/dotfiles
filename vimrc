@@ -10,7 +10,6 @@ call dein#begin(expand('~/dotfiles/vim/dein'))
 
 call dein#add('Shougo/dein.vim')
 
-call dein#add('neomake/neomake')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('ctrlpvim/ctrlp.vim')
@@ -30,6 +29,7 @@ call dein#add('keith/swift.vim')
 call dein#add('posva/vim-vue')
 call dein#add('pangloss/vim-javascript')
 call dein#add('mxw/vim-jsx')
+call dein#add('w0rp/ale')
 
 call dein#end()
 
@@ -63,3 +63,27 @@ let g:ariline#extensions#tabline#enabled = 1
 let g:airline_theme = 'solarized'
 
 let g:jsx_ext_required = 0
+
+
+" Asynchronous Lint Engine (ALE)
+" Limit linters used for JavaScript.
+let g:ale_linters = {
+\  'javascript': ['flow'],
+\  'vue': ['flow']
+\}
+let g:ale_fixers = {
+\  'javascript': ['prettier', 'eslint'],
+\  'vue': ['prettier', 'eslint']
+\}
+let g:ale_fix_on_save = 1
+highlight clear ALEErrorSign " otherwise uses error bg color (typically red)
+highlight clear ALEWarningSign " otherwise uses error bg color (typically red)
+let g:ale_sign_error = 'X' " could use emoji
+let g:ale_sign_warning = '?' " could use emoji
+let g:ale_statusline_format = ['X %d', '? %d', '']
+" %linter% is the name of the linter that provided the message
+" %s is the error or warning message
+let g:ale_echo_msg_format = '%linter% says %s'
+" Map keys to navigate between lines with errors and warnings.
+nnoremap <leader>an :ALENextWrap<cr>
+nnoremap <leader>ap :ALEPreviousWrap<cr>

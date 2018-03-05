@@ -4,34 +4,30 @@ if &compatible
   set nocompatible
 endif
 
-set runtimepath+=~/dotfiles/vim/dein/repos/github.com/Shougo/dein.vim
+call plug#begin('~/dotfiles/vim/plugged')
 
-call dein#begin(expand('~/dotfiles/vim/dein'))
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'iCyMind/NeoSolarized'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'ap/vim-css-color'
 
-call dein#add('Shougo/dein.vim')
+Plug 'tpope/vim-sleuth'
+Plug 'elixir-lang/vim-elixir'
+Plug 'ElmCast/elm-vim'
+Plug 'joukevandermaas/vim-ember-hbs'
+Plug 'leafgarland/typescript-vim'
+Plug 'digitaltoad/vim-pug'
+Plug 'keith/swift.vim'
+Plug 'posva/vim-vue'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
-call dein#add('ctrlpvim/ctrlp.vim')
-call dein#add('terryma/vim-multiple-cursors')
-call dein#add('iCyMind/NeoSolarized')
-call dein#add('editorconfig/editorconfig-vim')
-call dein#add('pbrisbin/vim-mkdir')
-call dein#add('ap/vim-css-color')
-
-call dein#add('tpope/vim-sleuth')
-call dein#add('elixir-lang/vim-elixir')
-call dein#add('ElmCast/elm-vim')
-call dein#add('joukevandermaas/vim-ember-hbs')
-call dein#add('leafgarland/typescript-vim')
-call dein#add('digitaltoad/vim-pug')
-call dein#add('keith/swift.vim')
-call dein#add('posva/vim-vue')
-call dein#add('pangloss/vim-javascript')
-call dein#add('mxw/vim-jsx')
-call dein#add('w0rp/ale')
-
-call dein#end()
+call plug#end()
 
 syntax enable
 set number
@@ -64,26 +60,12 @@ let g:airline_theme = 'solarized'
 
 let g:jsx_ext_required = 0
 
-
-" Asynchronous Lint Engine (ALE)
-" Limit linters used for JavaScript.
-let g:ale_linters = {
-\  'javascript': ['flow'],
-\  'vue': ['flow']
-\}
-let g:ale_fixers = {
-\  'javascript': ['prettier'],
-\  'vue': ['prettier']
-\}
-let g:ale_fix_on_save = 1
-highlight clear ALEErrorSign " otherwise uses error bg color (typically red)
-highlight clear ALEWarningSign " otherwise uses error bg color (typically red)
-let g:ale_sign_error = 'X' " could use emoji
-let g:ale_sign_warning = '?' " could use emoji
-let g:ale_statusline_format = ['X %d', '? %d', '']
-" %linter% is the name of the linter that provided the message
-" %s is the error or warning message
-let g:ale_echo_msg_format = '%linter% says %s'
-" Map keys to navigate between lines with errors and warnings.
-nnoremap <leader>an :ALENextWrap<cr>
-nnoremap <leader>ap :ALEPreviousWrap<cr>
+" Prettier
+let g:prettier#config#single_quote = 'false' 
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#arrow_parens = 'avoid'
+let g:prettier#config#trailing_comma = 'none'
+let g:prettier#config#parser = 'babylon'
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync

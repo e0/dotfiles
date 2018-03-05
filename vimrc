@@ -72,8 +72,8 @@ let g:ale_linters = {
 \  'vue': ['flow']
 \}
 let g:ale_fixers = {
-\  'javascript': ['prettier', 'eslint'],
-\  'vue': ['prettier', 'eslint']
+\  'javascript': ['prettier'],
+\  'vue': ['prettier']
 \}
 let g:ale_fix_on_save = 1
 highlight clear ALEErrorSign " otherwise uses error bg color (typically red)

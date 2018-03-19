@@ -26,6 +26,9 @@ Plug 'posva/vim-vue'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'leafgarland/typescript-vim'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'alx741/vim-hindent'
 
 call plug#end()
 

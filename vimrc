@@ -10,7 +10,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'iCyMind/NeoSolarized'
+Plug 'rakr/vim-one'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ap/vim-css-color'
@@ -36,8 +36,17 @@ syntax enable
 set number
 filetype plugin indent on
 
-colorscheme NeoSolarized
-"set background=dark
+if (empty($TMUX))
+  if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+colorscheme one
+let g:one_allow_italics = 1
+set background=light
 
 set tabstop=2
 set shiftwidth=2
@@ -59,7 +68,7 @@ let g:ctrlp_custom_ignore = {
 let g:elm_format_autosave = 1
 
 let g:ariline#extensions#tabline#enabled = 1
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'one'
 
 let g:jsx_ext_required = 0
 

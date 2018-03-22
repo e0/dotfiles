@@ -1,0 +1,8 @@
+{
+  "editor.fontFamily": "Input Mono Narrow",
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "Solarized Light",
+  "terminal.integrated.fontFamily": "Input Mono Narrow",
+  "terminal.integrated.fontSize": 14
+}

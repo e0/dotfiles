@@ -10,7 +10,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'rakr/vim-one'
+" Plug 'rakr/vim-one'
+Plug 'iCyMind/NeoSolarized'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ap/vim-css-color'
@@ -44,7 +45,8 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-colorscheme one
+" colorscheme one
+colorscheme NeoSolarized
 let g:one_allow_italics = 1
 set background=light
 
@@ -68,7 +70,8 @@ let g:ctrlp_custom_ignore = {
 let g:elm_format_autosave = 1
 
 let g:ariline#extensions#tabline#enabled = 1
-let g:airline_theme = 'one'
+" let g:airline_theme = 'one'
+let g:airline_theme = 'solarized'
 
 let g:jsx_ext_required = 0
 

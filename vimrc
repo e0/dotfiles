@@ -84,3 +84,6 @@ let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#parser = 'babylon'
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+
+" hindent
+let g:hindent_command = "hindent -XRecursiveDo"

@@ -26,7 +26,6 @@ Plug 'keith/swift.vim'
 Plug 'posva/vim-vue'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'leafgarland/typescript-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-hindent'
@@ -74,16 +73,6 @@ let g:ariline#extensions#tabline#enabled = 1
 let g:airline_theme = 'solarized'
 
 let g:jsx_ext_required = 0
-
-" Prettier
-let g:prettier#config#single_quote = 'false' 
-let g:prettier#config#bracket_spacing = 'true'
-let g:prettier#config#jsx_bracket_same_line = 'false'
-let g:prettier#config#arrow_parens = 'avoid'
-let g:prettier#config#trailing_comma = 'none'
-let g:prettier#config#parser = 'babylon'
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 " hindent
 let g:hindent_command = "hindent -XRecursiveDo"

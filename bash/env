@@ -6,4 +6,3 @@ export PATH="/usr/local/bin:$PATH"
 export PATH=$PATH:/Users/e0/dotfiles/bin
 export PATH="$PATH:`yarn global bin`"
 export PATH="$PATH:/Users/e0/.local/bin"
-export PATH="$PATH:/Users/e0/dev/flutter/bin"

@@ -19,7 +19,9 @@
    (quote
     ("d91ef4e714f05fff2070da7ca452980999f5361209e679ee988e3c432df24347" default)))
  '(desktop-save-mode t nil (desktop))
- '(package-selected-packages (quote (neotree helm cider clojure-mode solarized-theme)))
+ '(package-selected-packages
+   (quote
+    (magit neotree helm cider clojure-mode solarized-theme)))
  '(save-place-mode t nil (saveplace)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

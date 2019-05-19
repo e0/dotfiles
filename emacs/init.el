@@ -5,7 +5,15 @@
 (package-initialize)
 
 (setq package-list
-      '(magit neotree helm cider clojure-mode solarized-theme))
+      '(magit
+	neotree
+	helm
+	cider
+	clojure-mode
+	clojure-mode-extra-font-locking
+	paredit
+	rainbow-delimiters
+	solarized-theme))
 
 (unless package-archive-contents
   (package-refresh-contents))
@@ -24,6 +32,7 @@
 ; keys
 (global-set-key (kbd "M-o") 'other-window)
 (global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x p") 'paredit-mode)
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier nil)
 

@@ -37,11 +37,14 @@ function create_symlinks {
 
   rm ~/.zshrc
   rm -rf ~/.vim
+  rm ~/.emacs
+  rm -rf ~/.emacs.d
   rm ~/.vimrc
 
   ln -s ~/dotfiles/zshrc ~/.zshrc
   ln -s ~/dotfiles/vim ~/.config/nvim
   ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
+  ln -s ~/dotfiles/emacs ~/.emacs.d
 
   echo -e "\t\tDone."
 }
@@ -54,12 +57,12 @@ function install_yarn {
 
 echo ""
 
-#install_powerline_fonts
-install_neovim
+# install_powerline_fonts
+# install_neovim
 create_symlinks
-install_vim_solarized_theme
-install_dein
-install_yarn
+# install_vim_solarized_theme
+# install_dein
+# install_yarn
 
 
 echo -e "\nAll done!"

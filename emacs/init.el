@@ -27,6 +27,7 @@
 (load-theme 'solarized-light t)
 (global-display-line-numbers-mode)
 (tool-bar-mode -1)
+(show-paren-mode 1)
 
 
 ; keys

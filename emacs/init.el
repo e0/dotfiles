@@ -23,14 +23,6 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-
-; markdown-mode
-(use-package markdown-mode
-  :ensure t
-  :mode (("README\\.md\\'" . gfm-mode)
-         ("\\.md\\'" . markdown-mode)
-         ("\\.markdown\\'" . markdown-mode))
-  :init (setq markdown-command "multimarkdown"))
 					
 ; visual
 (set-face-attribute 'default nil :font "IBM Plex Mono" :height 140)
@@ -47,6 +39,21 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier nil)
 
+
+; markdown-mode
+(use-package markdown-mode
+  :ensure t
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+
+
+; clojurescript
+(setq cider-cljs-lein-repl
+	"(do (require 'figwheel-sidecar.repl-api)
+         (figwheel-sidecar.repl-api/start-figwheel!)
+         (figwheel-sidecar.repl-api/cljs-repl))")
 
 ; other
 (desktop-save-mode 1)

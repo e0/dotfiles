@@ -14,6 +14,7 @@
 	paredit
 	rainbow-delimiters
 	solarized-theme
+	use-package
 	markdown-mode))
 
 (unless package-archive-contents
@@ -22,6 +23,14 @@
   (unless (package-installed-p package)
     (package-install package)))
 
+
+; markdown-mode
+(use-package markdown-mode
+  :ensure t
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
 					
 ; visual
 (set-face-attribute 'default nil :font "IBM Plex Mono" :height 140)

@@ -13,7 +13,8 @@
 	clojure-mode-extra-font-locking
 	paredit
 	rainbow-delimiters
-	solarized-theme))
+	solarized-theme
+	markdown-mode))
 
 (unless package-archive-contents
   (package-refresh-contents))

@@ -30,6 +30,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-hindent'
 Plug 'jparise/vim-graphql'
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 call plug#end()
 

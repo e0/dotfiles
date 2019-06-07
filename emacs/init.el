@@ -15,7 +15,8 @@
 	rainbow-delimiters
 	solarized-theme
 	use-package
-	markdown-mode))
+	markdown-mode
+	adoc-mode))
 
 (unless package-archive-contents
   (package-refresh-contents))
@@ -29,6 +30,7 @@
 (load-theme 'solarized-light t)
 (global-display-line-numbers-mode)
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 (show-paren-mode 1)
 
 

@@ -22,6 +22,8 @@ function install_neovim {
   echo -n "=> Installing neovim ...\n"
   mkdir ~/.config
   brew install neovim/neovim/neovim
+  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   echo -e "\t\tDone."
 }
 
@@ -58,11 +60,11 @@ function install_yarn {
 echo ""
 
 # install_powerline_fonts
-# install_neovim
-create_symlinks
-# install_vim_solarized_theme
-# install_dein
+install_neovim
+install_vim_solarized_theme
+install_dein
 # install_yarn
+create_symlinks
 
 
 echo -e "\nAll done!"

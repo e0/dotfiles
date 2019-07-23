@@ -16,6 +16,15 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ap/vim-css-color'
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
 Plug 'tpope/vim-sleuth'
 Plug 'elixir-lang/vim-elixir'
 Plug 'ElmCast/elm-vim'

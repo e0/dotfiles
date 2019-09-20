@@ -23,10 +23,6 @@ function take {
   cd $1
 }
 
-function tree {
-  find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
-}
-
 function cl () {
   cd "$@" && ls
 }

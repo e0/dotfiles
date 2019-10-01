@@ -58,6 +58,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-hindent'
 Plug 'jparise/vim-graphql'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 call plug#end()
 
@@ -112,3 +113,7 @@ let g:hindent_command = "hindent -XRecursiveDo"
 " let g:prettier#autoformat = 0
 " let g:prettier#exec_cmd_async = 1
 " autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+
+" python
+let g:pymode_python = 'python3'
+let g:pymode_lint_ignore = ["E501", "W",]

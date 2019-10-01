@@ -27,9 +27,6 @@ function cl () {
   cd "$@" && ls
 }
 
-if type nvim > /dev/null 2>&1; then
-    alias vim='nvim'
-fi
 
 alias dockup="source /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh"
 
@@ -38,3 +35,14 @@ alias dockup="source /Applications/Docker/Docker\ Quickstart\ Terminal.app/Conte
 # --------------------------------
 alias python=python3
 alias pip=pip3
+alias py=python
+
+# --------------------------------
+# VIM
+# --------------------------------
+
+if type nvim > /dev/null 2>&1; then
+    alias vim='nvim'
+fi
+alias v='vim'
+

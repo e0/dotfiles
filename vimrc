@@ -1,40 +1,18 @@
-let &t_Co=256
-
-if &compatible
-  set nocompatible
-endif
-
+" PLUGINS
 call plug#begin('~/dotfiles/vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'rakr/vim-one'
 Plug 'iCyMind/NeoSolarized'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ap/vim-css-color'
-" Plug 'prettier/vim-prettier', {
-"   \ 'do': 'yarn install',
-"   \ 'branch': 'release/1.x',
-"   \ 'for': [
-"     \ 'javascript',
-"     \ 'typescript',
-"     \ 'css',
-"     \ 'less',
-"     \ 'scss',
-"     \ 'json',
-"     \ 'graphql',
-"     \ 'markdown',
-"     \ 'vue',
-"     \ 'lua',
-"     \ 'php',
-"     \ 'python',
-"     \ 'ruby',
-"     \ 'html',
-"     \ 'swift' ] }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
+" deoplete
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -44,23 +22,32 @@ else
 endif
 let g:deoplete#enable_at_startup = 1
 
+" deoplete js
+Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
+
+" deoplete ts
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': 'yarn global add neovim typescript && ./install.sh'}
+
+" deoplete python
+Plug 'deoplete-plugins/deoplete-jedi'
+
 Plug 'tpope/vim-sleuth'
-Plug 'elixir-lang/vim-elixir'
-Plug 'ElmCast/elm-vim'
-Plug 'joukevandermaas/vim-ember-hbs'
 Plug 'leafgarland/typescript-vim'
-Plug 'digitaltoad/vim-pug'
-Plug 'keith/swift.vim'
-Plug 'posva/vim-vue'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'alx741/vim-hindent'
 Plug 'jparise/vim-graphql'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'psf/black'
 
 call plug#end()
+
+
+
+let &t_Co=256
+
+if &compatible
+  set nocompatible
+endif
 
 syntax enable
 set number
@@ -74,9 +61,7 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-" colorscheme one
 colorscheme NeoSolarized
-let g:one_allow_italics = 1
 set background=light
 
 set tabstop=2
@@ -98,22 +83,17 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 
-let g:elm_format_autosave = 1
-
 let g:ariline#extensions#tabline#enabled = 1
-" let g:airline_theme = 'onedark'
 let g:airline_theme = 'solarized'
 
-let g:jsx_ext_required = 0
-
-" hindent
-let g:hindent_command = "hindent -XRecursiveDo"
-
 " prettier
-" let g:prettier#autoformat = 0
-" let g:prettier#exec_cmd_async = 1
-" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+let g:prettier#config#single_quote = 'false'
+let g:prettier#autoformat = 0
+let g:prettier#exec_cmd_async = 1
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
 
 " python
 let g:pymode_python = 'python3'
 let g:pymode_lint_ignore = ["E501", "W",]
+autocmd BufWritePre *.py execute ':Black'
+

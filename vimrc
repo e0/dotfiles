@@ -90,10 +90,11 @@ let g:airline_theme = 'solarized'
 let g:prettier#config#single_quote = 'false'
 let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 1
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml Prettier
 
 " python
 let g:pymode_python = 'python3'
+let g:pymode_options_max_line_length = 88
 let g:pymode_lint_ignore = ["E501", "W",]
 autocmd BufWritePre *.py execute ':Black'
 

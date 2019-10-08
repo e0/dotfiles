@@ -38,6 +38,8 @@ Plug 'jparise/vim-graphql'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'psf/black'
+Plug 'pangloss/vim-javascript'
+Plug 'e0/vim-jsx-pretty'
 
 call plug#end()
 

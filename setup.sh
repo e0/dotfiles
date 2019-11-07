@@ -57,14 +57,30 @@ function install_yarn {
   echo -e "\t\tDone."
 }
 
+function setup_haskell {
+  echo -n "=> Installing haskell-stack and hindent (this may take a while) ...\n"
+  brew install haskell-stack
+  stack install hindent
+  echo -e "\t\tDone."
+}
+
+function setup_python {
+  echo -n "=> Installing python, pynvim, and black ...\n"
+  brew install python
+  pip3 install --user pynvim
+  pip3 install black
+  echo -e "\t\tDone."
+}
+
 echo ""
 
 # install_powerline_fonts
 install_neovim
 install_vim_solarized_theme
+setup_haskell
+setup_python
 install_dein
-# install_yarn
+install_yarn
 create_symlinks
-
 
 echo -e "\nAll done!"

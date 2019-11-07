@@ -40,6 +40,8 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'psf/black'
 Plug 'pangloss/vim-javascript'
 Plug 'e0/vim-jsx-pretty'
+Plug 'alx741/vim-hindent'
+Plug 'neovimhaskell/haskell-vim'
 
 call plug#end()
 
@@ -92,7 +94,7 @@ let g:airline_theme = 'solarized'
 let g:prettier#config#single_quote = 'false'
 let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 1
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
 
 " python
 let g:pymode_python = 'python3'

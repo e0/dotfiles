@@ -72,6 +72,14 @@ function setup_python {
   echo -e "\t\tDone."
 }
 
+function setup_typescript {
+  echo -n "=> Installing node packages for neovim, typescript, prettier ...\n"
+  yarn global add neovim
+  yarn global add typescript
+  yarn global add prettier
+  echo -e "\t\tDone."
+}
+
 echo ""
 
 # install_powerline_fonts
@@ -81,6 +89,7 @@ setup_haskell
 setup_python
 install_dein
 install_yarn
+setup_typescript
 create_symlinks
 
 echo -e "\nAll done!"

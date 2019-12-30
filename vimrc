@@ -90,7 +90,7 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 
 let g:ariline#extensions#tabline#enabled = 1
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'distinguished'
 
 " prettier
 let g:prettier#config#single_quote = 'false'

@@ -11,6 +11,7 @@ Plug 'ap/vim-css-color'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/seoul256.vim'
 
 " deoplete
 if has('nvim')
@@ -27,7 +28,7 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 
 " deoplete ts
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': 'yarn global add neovim typescript && ./install.sh'}
+Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
 
 " deoplete python
 Plug 'deoplete-plugins/deoplete-jedi'
@@ -35,13 +36,13 @@ Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'tpope/vim-sleuth'
 Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'psf/black'
 Plug 'pangloss/vim-javascript'
 Plug 'e0/vim-jsx-pretty'
 Plug 'alx741/vim-hindent'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 call plug#end()
 
@@ -65,8 +66,9 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-colorscheme NeoSolarized
-set background=light
+let g:seoul256_background = 235
+colorscheme seoul256
+set background=dark
 
 set tabstop=2
 set shiftwidth=2

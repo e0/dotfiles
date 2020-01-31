@@ -92,8 +92,16 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 let g:ariline#extensions#tabline#enabled = 1
 let g:airline_theme = 'distinguished'
 
-" prettier
+" prettier, use Prettier default instead of vim-prettier default
 let g:prettier#config#single_quote = 'false'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#arrow_parens = 'avoid'
+let g:prettier#config#trailing_comma = 'none'
+let g:prettier#config#parser = 'babylon'
+
+
+
 let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 1
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier

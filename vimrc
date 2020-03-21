@@ -78,6 +78,7 @@ set expandtab
 set mouse=a
 set backspace=indent,eol,start
 set backupcopy=yes
+set clipboard+=unnamedplus
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows

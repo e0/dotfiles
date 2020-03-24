@@ -43,6 +43,7 @@ Plug 'e0/vim-jsx-pretty'
 Plug 'alx741/vim-hindent'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'posva/vim-vue'
 
 call plug#end()
 

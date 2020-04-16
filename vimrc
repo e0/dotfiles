@@ -44,6 +44,7 @@ Plug 'alx741/vim-hindent'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'posva/vim-vue'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 

@@ -65,9 +65,10 @@ function setup_haskell {
 }
 
 function setup_python {
-  echo -n "=> Installing python, pynvim, and black ...\n"
+  echo -n "=> Installing python, pynvim, virtualenv, and black ...\n"
   brew install python
   pip3 install --user pynvim
+  pip3 install virtualenv
   pip3 install black
   echo -e "\t\tDone."
 }

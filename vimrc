@@ -70,8 +70,10 @@ if (empty($TMUX))
   endif
 endif
 let g:seoul256_background = 235
-colorscheme seoul256
-set background=dark
+colorscheme NeoSolarized
+set background=light
+" colorscheme seoul256
+" set background=dark
 
 set tabstop=2
 set shiftwidth=2
@@ -94,7 +96,8 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 
 let g:ariline#extensions#tabline#enabled = 1
-let g:airline_theme = 'distinguished'
+let g:airline_theme = 'solarized'
+" let g:airline_theme = 'distinguished'
 
 " prettier, use Prettier default instead of vim-prettier default
 let g:prettier#config#single_quote = 'false'

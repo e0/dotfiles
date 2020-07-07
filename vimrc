@@ -46,6 +46,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'posva/vim-vue'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jvirtanen/vim-hcl'
+Plug 'chr4/nginx.vim'
 
 call plug#end()
 

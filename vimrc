@@ -47,6 +47,7 @@ Plug 'posva/vim-vue'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jvirtanen/vim-hcl'
 Plug 'chr4/nginx.vim'
+Plug 'neo4j-contrib/cypher-vim-syntax'
 
 call plug#end()
 

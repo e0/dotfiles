@@ -12,6 +12,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/seoul256.vim'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 " deoplete
 if has('nvim')
@@ -34,15 +35,14 @@ Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'
 Plug 'deoplete-plugins/deoplete-jedi'
 
 Plug 'tpope/vim-sleuth'
-Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'psf/black'
 Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
 Plug 'e0/vim-jsx-pretty'
 Plug 'alx741/vim-hindent'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'posva/vim-vue'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jvirtanen/vim-hcl'

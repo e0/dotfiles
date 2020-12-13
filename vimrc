@@ -9,49 +9,17 @@ Plug 'iCyMind/NeoSolarized'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ap/vim-css-color'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
-Plug 'junegunn/seoul256.vim'
-Plug 'evanleck/vim-svelte', {'branch': 'main'}
-
-" deoplete
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
-
-" deoplete js
-Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
-
-" deoplete ts
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
-
-" deoplete python
-Plug 'deoplete-plugins/deoplete-jedi'
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sleuth'
+
 Plug 'jparise/vim-graphql'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'psf/black'
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'e0/vim-jsx-pretty'
-Plug 'alx741/vim-hindent'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'posva/vim-vue'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'jvirtanen/vim-hcl'
 Plug 'chr4/nginx.vim'
 Plug 'neo4j-contrib/cypher-vim-syntax'
+Plug 'leafOfTree/vim-svelte-plugin'
 
 call plug#end()
-
-
 
 let &t_Co=256
 
@@ -60,7 +28,13 @@ if &compatible
 endif
 
 syntax enable
+colorscheme NeoSolarized
+set background=light
 set number
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
 filetype plugin indent on
 
 if (empty($TMUX))
@@ -71,16 +45,6 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-let g:seoul256_background = 235
-colorscheme NeoSolarized
-set background=light
-" colorscheme seoul256
-" set background=dark
-
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
 
 set mouse=a
 set backspace=indent,eol,start
@@ -99,7 +63,6 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 let g:ariline#extensions#tabline#enabled = 1
 let g:airline_theme = 'solarized'
-" let g:airline_theme = 'distinguished'
 
 " prettier, use Prettier default instead of vim-prettier default
 let g:prettier#config#single_quote = 'false'
@@ -108,8 +71,6 @@ let g:prettier#config#jsx_bracket_same_line = 'false'
 let g:prettier#config#arrow_parens = 'avoid'
 let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#parser = 'babylon'
-
-
 
 let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 1

@@ -45,6 +45,7 @@ function create_symlinks {
 
   ln -s ~/dotfiles/zshrc ~/.zshrc
   ln -s ~/dotfiles/vim ~/.config/nvim
+  ln -s ~/dotfiles/coc-settings.json ~/.config/nvim/coc-settings.json
   ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
   ln -s ~/dotfiles/emacs ~/.emacs.d
 

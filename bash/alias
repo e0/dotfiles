@@ -4,6 +4,12 @@ alias rf="source ~/.bash_profile"
 alias code="cd ~/Documents/Code"
 
 # --------------------------------
+# EXA
+# --------------------------------
+alias x='exa --long --header --git'
+
+
+# --------------------------------
 # GIT
 # --------------------------------
 alias gch="git checkout"
@@ -37,6 +43,7 @@ alias python=python3
 alias pip=pip3
 alias py=python
 
+
 # --------------------------------
 # VIM
 # --------------------------------
@@ -45,4 +52,6 @@ if type nvim > /dev/null 2>&1; then
     alias vim='nvim'
 fi
 alias v='vim'
+
+
 

@@ -18,7 +18,6 @@ Plug 'psf/black'
 Plug 'chr4/nginx.vim'
 Plug 'neo4j-contrib/cypher-vim-syntax'
 Plug 'leafOfTree/vim-svelte-plugin'
-Plug 'andys8/vim-elm-syntax'
 
 call plug#end()
 
@@ -76,14 +75,3 @@ let g:pymode_options_max_line_length = 88
 let g:pymode_lint_ignore = ["E501", "W",]
 autocmd BufWritePre *.py execute ':Black'
 
-
-"coc Keybindings
-nmap <leader>r <Plug>(coc-rename)
-nmap <silent> <leader>s <Plug>(coc-fix-current)
-nmap <silent> <leader>S <Plug>(coc-codeaction)
-nmap <silent> <leader>a <Plug>(coc-diagnostic-next)
-nmap <silent> <leader>A <Plug>(coc-diagnostic-next-error)
-nmap <silent> <leader>d <Plug>(coc-definition)
-nmap <silent> <leader>g :call CocAction('doHover')<CR>
-nmap <silent> <leader>u <Plug>(coc-references)
-nmap <silent> <leader>p :call CocActionAsync('format')<CR>

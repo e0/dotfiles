@@ -67,7 +67,7 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 let g:ariline#extensions#tabline#enabled = 1
 let g:airline_theme = 'solarized'
 
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.svelte Neoformat prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.cjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.svelte Neoformat prettier
 
 " python
 let g:pymode_python = 'python3'

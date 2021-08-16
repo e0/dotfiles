@@ -8,13 +8,11 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'iCyMind/NeoSolarized'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ap/vim-css-color'
-Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sleuth'
 
 Plug 'jparise/vim-graphql'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-Plug 'psf/black'
 Plug 'chr4/nginx.vim'
 Plug 'neo4j-contrib/cypher-vim-syntax'
 Plug 'leafOfTree/vim-svelte-plugin'
@@ -67,11 +65,10 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 let g:ariline#extensions#tabline#enabled = 1
 let g:airline_theme = 'solarized'
 
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.cjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.svelte Neoformat prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " python
 let g:pymode_python = 'python3'
 let g:pymode_options_max_line_length = 88
 let g:pymode_lint_ignore = ["E501", "W",]
-autocmd BufWritePre *.py execute ':Black'
 

@@ -66,6 +66,8 @@ let g:ariline#extensions#tabline#enabled = 1
 let g:airline_theme = 'solarized'
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+command WW noa w
+cabbrev ww WW
 
 " python
 let g:pymode_python = 'python3'

@@ -10,6 +10,7 @@ Plug 'pbrisbin/vim-mkdir'
 Plug 'ap/vim-css-color'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sleuth'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'jparise/vim-graphql'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
@@ -29,8 +30,8 @@ if &compatible
 endif
 
 syntax enable
-colorscheme NeoSolarized
-set background=light
+colorscheme dracula
+set background=dark
 set number
 set tabstop=2
 set shiftwidth=2

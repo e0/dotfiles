@@ -64,7 +64,7 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 
 let g:ariline#extensions#tabline#enabled = 1
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'dracula'
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 command WW noa w

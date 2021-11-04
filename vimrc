@@ -10,6 +10,7 @@ Plug 'pbrisbin/vim-mkdir'
 Plug 'ap/vim-css-color'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sleuth'
+Plug 'github/copilot.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'jparise/vim-graphql'

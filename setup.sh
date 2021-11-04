@@ -27,6 +27,12 @@ function install_pnpm {
   echo -e "\t\tDone."
 }
 
+function setup_typescript {
+  echo -n "=> Installing node packages for neovim, typescript ...\n"
+  pnpm install -g neovim
+  pnpm install -g typescript
+}
+
 function setup_python {
   echo -n "=> Installing python, pynvim, virtualenv, and black ...\n"
   brew install python
@@ -62,6 +68,7 @@ install_exa
 install_neovim
 install_node
 install_pnpm
+setup_typescript
 setup_prettier
 # setup_python
 create_symlinks

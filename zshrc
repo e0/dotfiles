@@ -49,7 +49,7 @@ ZSH_THEME="smt-e0"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras brew docker node npm osx pip pod python golang)
+plugins=(git git-extras brew docker node npm macos pip pod python golang)
 
 # User configuration
 

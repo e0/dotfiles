@@ -27,6 +27,13 @@ function install_pnpm {
   echo -e "\t\tDone."
 }
 
+function install_neovim_fuzzy_dependencies {
+  echo -n "=> Installing neovim-fuzzy dependencies ...\n"
+  brew install fzy
+  brew install rg
+  echo -e "\t\tDone."
+}
+
 function setup_typescript {
   echo -n "=> Installing node packages for neovim, typescript ...\n"
   pnpm install -g neovim
@@ -66,6 +73,7 @@ echo ""
 
 install_exa
 install_neovim
+install_neovim_fuzzy_dependencies
 install_node
 install_pnpm
 setup_typescript

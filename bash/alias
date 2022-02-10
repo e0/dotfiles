@@ -17,6 +17,8 @@ alias gco="git add . && git add -u && git commit -m"
 alias gd="git diff | subl -"
 alias gp="git push"
 alias gs="git status"
+alias s="git stash"
+alias pop="git stash pop"
 
 if [ -f ~/Dropbox/bin/dotfiles/bash/alias-completion-wrapper.bash ]; then
   . ~/Dropbox/bin/dotfiles/bash/alias-completion-wrapper.bash

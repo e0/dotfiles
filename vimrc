@@ -72,3 +72,6 @@ let g:pymode_python = 'python3'
 let g:pymode_options_max_line_length = 88
 let g:pymode_lint_ignore = ["E501", "W",]
 
+" typescript
+ let g:vim_svelte_plugin_use_typescript = 1
+

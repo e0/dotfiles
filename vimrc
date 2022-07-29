@@ -19,6 +19,7 @@ Plug 'chr4/nginx.vim'
 Plug 'neo4j-contrib/cypher-vim-syntax'
 Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'neoclide/jsonc.vim'
+Plug 'elel-dev/vim-astro-syntax'
 
 call plug#end()
 

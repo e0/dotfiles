@@ -11,7 +11,7 @@ Plug 'ap/vim-css-color'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sleuth'
 Plug 'github/copilot.vim'
-Plug 'sainnhe/everforest'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'amdt/sunset'
 
 Plug 'jparise/vim-graphql'
@@ -27,15 +27,13 @@ call plug#end()
 " Map <leader> to `,`
 let mapleader=','
 
-let &t_Co=256
-
 if &compatible
   set nocompatible
 endif
 
 syntax enable
 set background=light
-colorscheme everforest
+colorscheme PaperColor
 let g:everforest_background = 'hard'
 set number
 set tabstop=2
@@ -69,7 +67,7 @@ nnoremap <C-p> :FuzzyOpen<CR>
 lua << END
 require('lualine').setup{
   options = {
-    theme = 'everforest'
+    theme = 'iceberg'
   }
 }
 END

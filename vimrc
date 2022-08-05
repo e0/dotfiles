@@ -1,8 +1,8 @@
 " PLUGINS
 call plug#begin('~/dotfiles/vim/plugged')
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'iCyMind/NeoSolarized'
@@ -11,7 +11,7 @@ Plug 'ap/vim-css-color'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sleuth'
 Plug 'github/copilot.vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sainnhe/everforest'
 
 Plug 'jparise/vim-graphql'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
@@ -33,8 +33,9 @@ if &compatible
 endif
 
 syntax enable
-colorscheme dracula
-set background=dark
+set background=light
+colorscheme everforest
+let g:everforest_background = 'hard'
 set number
 set tabstop=2
 set shiftwidth=2
@@ -61,8 +62,13 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 nnoremap <C-p> :FuzzyOpen<CR>
 
-let g:ariline#extensions#tabline#enabled = 1
-let g:airline_theme = 'dracula'
+lua << END
+require('lualine').setup{
+  options = {
+    theme = 'everforest'
+  }
+}
+END
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 command WW noa w

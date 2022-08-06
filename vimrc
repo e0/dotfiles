@@ -1,8 +1,6 @@
 " PLUGINS
 call plug#begin('~/dotfiles/vim/plugged')
 
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'iCyMind/NeoSolarized'
@@ -13,6 +11,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'github/copilot.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'amdt/sunset'
+Plug 'itchyny/lightline.vim'
 
 Plug 'jparise/vim-graphql'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
@@ -34,7 +33,6 @@ endif
 syntax enable
 set background=light
 colorscheme PaperColor
-let g:everforest_background = 'hard'
 set number
 set tabstop=2
 set shiftwidth=2
@@ -64,13 +62,9 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 nnoremap <C-p> :FuzzyOpen<CR>
 
-lua << END
-require('lualine').setup{
-  options = {
-    theme = 'iceberg'
-  }
-}
-END
+let g:lightline = {
+      \ 'colorscheme': 'PaperColor',
+      \ }
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 command WW noa w

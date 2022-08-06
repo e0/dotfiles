@@ -9,8 +9,8 @@ Plug 'ap/vim-css-color'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sleuth'
 Plug 'github/copilot.vim'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'amdt/sunset'
+Plug 'lifepillar/vim-solarized8'
 Plug 'itchyny/lightline.vim'
 
 Plug 'jparise/vim-graphql'
@@ -32,7 +32,7 @@ endif
 
 syntax enable
 set background=light
-colorscheme PaperColor
+colorscheme solarized8_high
 set number
 set tabstop=2
 set shiftwidth=2
@@ -62,9 +62,7 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 nnoremap <C-p> :FuzzyOpen<CR>
 
-let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
-      \ }
+let g:lightline = { 'colorscheme': 'solarized' }
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 command WW noa w

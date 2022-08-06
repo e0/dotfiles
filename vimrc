@@ -9,7 +9,7 @@ Plug 'ap/vim-css-color'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sleuth'
 Plug 'github/copilot.vim'
-Plug 'amdt/sunset'
+Plug 'vimpostor/vim-lumen'
 Plug 'lifepillar/vim-solarized8'
 Plug 'itchyny/lightline.vim'
 
@@ -48,9 +48,6 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-
-let g:sunset_latitude = 57.708870
-let g:sunset_longitude = 11.974560
 
 set mouse=a
 set backspace=indent,eol,start

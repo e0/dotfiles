@@ -3,14 +3,14 @@ call plug#begin('~/dotfiles/vim/plugged')
 
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'iCyMind/NeoSolarized'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ap/vim-css-color'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sleuth'
 Plug 'github/copilot.vim'
-Plug 'vimpostor/vim-lumen'
-Plug 'lifepillar/vim-solarized8'
+" Plug 'vimpostor/vim-lumen'
+" Plug 'lifepillar/vim-solarized8'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'itchyny/lightline.vim'
 
 Plug 'jparise/vim-graphql'
@@ -32,7 +32,8 @@ endif
 
 syntax enable
 set background=light
-colorscheme solarized8_high
+" colorscheme solarized8_high
+colorscheme dracula
 set number
 set tabstop=2
 set shiftwidth=2
@@ -59,7 +60,7 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 nnoremap <C-p> :FuzzyOpen<CR>
 
-let g:lightline = { 'colorscheme': 'solarized' }
+let g:lightline = { 'colorscheme': 'dracula' }
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 command WW noa w

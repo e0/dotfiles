@@ -8,9 +8,10 @@ Plug 'ap/vim-css-color'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sleuth'
 Plug 'github/copilot.vim'
-" Plug 'vimpostor/vim-lumen'
+Plug 'vimpostor/vim-lumen'
 " Plug 'lifepillar/vim-solarized8'
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sainnhe/everforest'
 Plug 'itchyny/lightline.vim'
 
 Plug 'jparise/vim-graphql'
@@ -20,6 +21,7 @@ Plug 'neo4j-contrib/cypher-vim-syntax'
 Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'neoclide/jsonc.vim'
 Plug 'elel-dev/vim-astro-syntax'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
@@ -33,7 +35,13 @@ endif
 syntax enable
 set background=light
 " colorscheme solarized8_high
-colorscheme dracula
+" colorscheme dracula
+let g:everforest_background = 'hard'
+let g:everforest_better_performance = 1
+let g:everforest_enable_italic = 1
+colorscheme everforest
+
+
 set number
 set tabstop=2
 set shiftwidth=2
@@ -60,7 +68,9 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 nnoremap <C-p> :FuzzyOpen<CR>
 
-let g:lightline = { 'colorscheme': 'dracula' }
+" let g:lightline = { 'colorscheme': 'dracula' }
+" let g:lightline = { 'colorscheme': 'solarized' }
+let g:lightline = { 'colorscheme': 'everforest' }
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 command WW noa w

@@ -8,7 +8,7 @@ Plug 'ap/vim-css-color'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sleuth'
 Plug 'github/copilot.vim'
-Plug 'vimpostor/vim-lumen'
+" Plug 'vimpostor/vim-lumen'
 " Plug 'lifepillar/vim-solarized8'
 " Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sainnhe/everforest'
@@ -33,7 +33,7 @@ if &compatible
 endif
 
 syntax enable
-set background=light
+set background=dark
 " colorscheme solarized8_high
 " colorscheme dracula
 let g:everforest_background = 'hard'
@@ -66,7 +66,7 @@ set clipboard+=unnamedplus
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
-nnoremap <C-p> :FuzzyOpen<CR>
+nnoremap <C-p> :FuzzyOpen .<CR>
 
 " let g:lightline = { 'colorscheme': 'dracula' }
 " let g:lightline = { 'colorscheme': 'solarized' }
@@ -83,4 +83,3 @@ let g:pymode_lint_ignore = ["E501", "W",]
 
 " typescript
  let g:vim_svelte_plugin_use_typescript = 1
-

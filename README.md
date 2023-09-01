@@ -9,4 +9,3 @@
 1. git clone https://github.com/e0/dotfiles
 2. run setup.sh
 3. source ~/.zshrc
-4. Run vim and: `:UpdateRemotePlugins` followed by `:PlugInstall`

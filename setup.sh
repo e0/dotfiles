@@ -58,13 +58,13 @@ function setup_prettier {
 function create_symlinks {
   echo -n "=> Creating symlinks...\n"
 
+  # Remove existing configurations
   rm ~/.zshrc
-  rm -rf ~/.vim
-  rm ~/.vimrc
+  rm -rf ~/.config/nvim
 
+  # Create symlinks
   ln -s ~/dotfiles/zshrc ~/.zshrc
-  ln -s ~/dotfiles/vim ~/.config/nvim
-  ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
+  ln -s ~/dotfiles/nvim ~/.config/nvim
 
   echo -e "\t\tDone."
 }

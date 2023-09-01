@@ -1,3 +1,7 @@
 *.swp
 vim/*
 *.DS_Store
+
+# Ignore lazy-lock.json
+lazy-lock.json
+

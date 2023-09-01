@@ -57,6 +57,7 @@ require("lazy").setup({
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<C-p>", builtin.find_files, {})
+vim.keymap.set("n", "<C-k>", builtin.live_grep, {})
 
 require("mason").setup()
 require("mason-lspconfig").setup({

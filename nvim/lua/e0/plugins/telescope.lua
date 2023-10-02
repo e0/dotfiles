@@ -6,6 +6,6 @@ return {
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<C-p>", builtin.git_files, {})
 		vim.keymap.set("n", "<C-k>", builtin.live_grep, {})
-		vim.keymap.set("n", "<C-r>", builtin.lsp_references, {})
+		vim.keymap.set("n", "<C-[>", builtin.lsp_references, {})
 	end,
 }

@@ -4,12 +4,19 @@ return {
 		local conform = require("conform")
 
 		conform.setup({
+			formatters = {
+				svelte_fmt = {
+					command = "prettier",
+					args = { "--plugin", "prettier-plugin-svelte", "$FILENAME" },
+				},
+			},
+
 			formatters_by_ft = {
 				lua = { "stylua" },
 				-- Conform will use the first available formatter in the list
 				javascript = { "prettier_d", "prettier" },
 				typescript = { "prettier_d", "prettier" },
-				svelte = { "prettier_d", "prettier" },
+				svelte = { "svelte_fmt" },
 				-- Formatters can also be specified with additional options
 				python = {
 					formatters = { "isort", "black" },

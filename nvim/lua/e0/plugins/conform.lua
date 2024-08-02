@@ -14,8 +14,8 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				-- Conform will use the first available formatter in the list
-				javascript = { "prettier_d", "prettier" },
-				typescript = { "prettier_d", "prettier" },
+				javascript = { "prettier" },
+				typescript = { "prettier" },
 				svelte = { "svelte_fmt" },
 				-- Formatters can also be specified with additional options
 				python = {

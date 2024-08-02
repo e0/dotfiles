@@ -2,7 +2,7 @@ return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
 		local lualine = require("lualine")
-		local options = { icons_enabled = false, theme = "solarized_light" }
+		local options = { icons_enabled = false }
 		local sections = {
 			lualine_a = { "mode" },
 			lualine_b = { "branch", "diff" },

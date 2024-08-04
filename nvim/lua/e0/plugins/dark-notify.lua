@@ -1,6 +1,8 @@
 return {
-	"cormacrelf/dark-notify",
-	config = function()
-		require("dark_notify").run()
-	end,
+  "cormacrelf/dark-notify",
+  config = function()
+    local dn = require("dark_notify")
+    dn.run({})
+    dn.update()
+  end,
 }

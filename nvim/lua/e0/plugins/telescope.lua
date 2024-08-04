@@ -2,8 +2,24 @@ return {
   "nvim-telescope/telescope.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
+    local telescope = require("telescope")
     local builtin = require("telescope.builtin")
     local M = {}
+
+    telescope.setup({
+
+      defaults = {
+        layout_strategy = "vertical",
+        layout_config = {
+          vertical = {
+            mirror = true,
+            preview_cutoff = 0,
+            preview_height = 0.7,
+            prompt_position = "top",
+          },
+        },
+      },
+    })
 
     -- https://github.com/nvim-telescope/telescope.nvim/wiki/Configuration-Recipes#falling-back-to-find_files-if-git_files-cant-find-a-git-directory
     -- We cache the results of "git rev-parse"

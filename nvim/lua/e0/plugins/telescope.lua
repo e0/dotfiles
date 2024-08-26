@@ -40,8 +40,8 @@ return {
       end
     end
 
-    vim.keymap.set("n", "<C-p>", M.project_files, {})
-    vim.keymap.set("n", "<C-k>", builtin.live_grep, {})
-    vim.keymap.set("n", "<C-[>", builtin.lsp_references, {})
+    vim.keymap.set("n", "<leader>ff", M.project_files, {})
+    vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+    vim.keymap.set("n", "<leader>fr", builtin.lsp_references, {})
   end,
 }

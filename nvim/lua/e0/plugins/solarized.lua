@@ -5,7 +5,9 @@ return {
   config = function()
     local solarized = require("solarized")
     solarized.setup({
-      transparent = true,
+      transparent = {
+        enabled = true,
+      },
       palette = 'selenized',
       theme = "neo"
     })

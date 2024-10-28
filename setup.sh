@@ -31,6 +31,12 @@ function install_ripgrip {
   echo -e "\t\tDone."
 }
 
+function install_luarocks {
+  echo -n "=> Installing luarocks ...\n"
+  brew install luarocks
+  echo -e "\t\tDone."
+}
+
 function create_symlinks {
   echo -n "=> Creating symlinks...\n"
 
@@ -41,6 +47,7 @@ function create_symlinks {
   # Create symlinks
   ln -s ~/dotfiles/zshrc ~/.zshrc
   ln -s ~/dotfiles/nvim ~/.config/nvim
+  ln -s ~/dotfiles/wezterm.lua ~/.wezterm.lua
 
   echo -e "\t\tDone."
 }
@@ -51,6 +58,8 @@ install_eza
 install_neovim
 install_node
 install_bun
+install_ripgrip
+install_luarocks
 create_symlinks
 
 echo -e "\nAll done!"

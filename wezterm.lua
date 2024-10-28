@@ -18,11 +18,14 @@ local function scheme_for_appearance(appearance)
 end
 
 config.font = wezterm.font 'Martian Mono VF'
-config.font_size = 12
+config.font_size = 12.5
 config.freetype_load_target = "Normal"
 config.freetype_render_target = "HorizontalLcd"
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.adjust_window_size_when_changing_font_size = false
+
+config.window_decorations = 'RESIZE'
+
 
 config.color_scheme = scheme_for_appearance(get_appearance())
 config.colors = {
@@ -50,6 +53,13 @@ config.inactive_pane_hsb = {
 }
 -- iTerm2-like keybindings
 config.keys = {
+  -- Full screen using CMD + Enter
+  {
+    key = 'Return',
+    mods = 'CMD',
+    action = wezterm.action.ToggleFullScreen,
+  },
+
   -- Pane splitting
   {
     key = 'd',
@@ -68,27 +78,6 @@ config.keys = {
   -- Move to the previous pane
   { key = "[", mods = "CMD", action = wezterm.action { ActivatePaneDirection = "Prev" } },
 
-  -- Pane navigation (Option + Arrow keys)
-  {
-    key = 'LeftArrow',
-    mods = 'OPT',
-    action = wezterm.action.ActivatePaneDirection 'Left',
-  },
-  {
-    key = 'RightArrow',
-    mods = 'OPT',
-    action = wezterm.action.ActivatePaneDirection 'Right',
-  },
-  {
-    key = 'UpArrow',
-    mods = 'OPT',
-    action = wezterm.action.ActivatePaneDirection 'Up',
-  },
-  {
-    key = 'DownArrow',
-    mods = 'OPT',
-    action = wezterm.action.ActivatePaneDirection 'Down',
-  },
 
   -- Close tab/pane (CMD + W)
   {

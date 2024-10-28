@@ -17,6 +17,55 @@ local function scheme_for_appearance(appearance)
   end
 end
 
+local function get_tab_bar_colors(appearance)
+  if appearance:find 'Dark' then
+    return {
+      background = "rgba(0, 0, 0, 1)",
+      active_tab = {
+        bg_color = "rgba(50, 50, 50, 0.6)",
+        fg_color = "#ffffff",
+      },
+      inactive_tab = {
+        bg_color = "rgba(30, 30, 30, 0.2)",
+        fg_color = "#888888",
+      },
+      inactive_tab_hover = {
+        bg_color = "rgba(40, 40, 40, 0.3)",
+        fg_color = "#bbbbbb",
+      },
+    }
+  else
+    return {
+      background = "rgba(255, 255, 255, 0.2)",
+      active_tab = {
+        bg_color = "rgba(230, 230, 230, 0.6)",
+        fg_color = "#000000",
+      },
+      inactive_tab = {
+        bg_color = "rgba(245, 245, 245, 0.2)",
+        fg_color = "#666666",
+      },
+      inactive_tab_hover = {
+        bg_color = "rgba(235, 235, 235, 0.3)",
+        fg_color = "#444444",
+      },
+    }
+  end
+end
+
+-- Set up an event handler to update colors when appearance changes
+wezterm.on('window-config-reloaded', function(window)
+  local appearance = window:get_appearance()
+  local colors = get_tab_bar_colors(appearance)
+  window:set_config_overrides({
+    colors = { tab_bar = colors }
+  })
+end)
+
+
+local appearance = get_appearance()
+
+
 config.font = wezterm.font 'Martian Mono VF'
 config.font_size = 12.5
 config.freetype_load_target = "Normal"
@@ -27,26 +76,11 @@ config.adjust_window_size_when_changing_font_size = false
 config.window_decorations = 'RESIZE'
 
 
-config.color_scheme = scheme_for_appearance(get_appearance())
 config.colors = {
-  tab_bar = {
-    background = "rgba(0, 0, 0, 0.2)",    -- Light opacity to blend into background
-    active_tab = {
-      bg_color = "rgba(50, 50, 50, 0.6)", -- Active tab color with reduced opacity
-      fg_color = "#ffffff",
-    },
-    inactive_tab = {
-      bg_color = "rgba(30, 30, 30, 0.2)", -- Inactive tab color with transparency
-      fg_color = "#888888",
-    },
-    inactive_tab_hover = {
-      bg_color = "rgba(40, 40, 40, 0.3)", -- Hover color for a subtle highlight effect
-      fg_color = "#bbbbbb",
-    },
-  }
+  tab_bar = get_tab_bar_colors(appearance)
 }
+config.color_scheme = scheme_for_appearance(appearance)
 config.use_fancy_tab_bar = false
-config.hide_tab_bar_if_only_one_tab = true
 config.inactive_pane_hsb = {
   saturation = 1.0,
   brightness = 1.0,

@@ -11,9 +11,9 @@ end
 
 local function scheme_for_appearance(appearance)
   if appearance:find 'Dark' then
-    return 'Selenized Dark (Gogh)'
+    return 'Papercolor Dark (Gogh)'
   else
-    return 'Selenized Light (Gogh)'
+    return 'Papercolor Light (Gogh)'
   end
 end
 
@@ -22,16 +22,8 @@ local function get_tab_bar_colors(appearance)
     return {
       background = "rgba(0, 0, 0, 1)",
       active_tab = {
-        bg_color = "rgba(50, 50, 50, 0.6)",
+        bg_color = "rgba(50, 50, 50, 0.9)",
         fg_color = "#ffffff",
-      },
-      inactive_tab = {
-        bg_color = "rgba(30, 30, 30, 0.2)",
-        fg_color = "#888888",
-      },
-      inactive_tab_hover = {
-        bg_color = "rgba(40, 40, 40, 0.3)",
-        fg_color = "#bbbbbb",
       },
     }
   else
@@ -40,14 +32,6 @@ local function get_tab_bar_colors(appearance)
       active_tab = {
         bg_color = "rgba(230, 230, 230, 0.6)",
         fg_color = "#000000",
-      },
-      inactive_tab = {
-        bg_color = "rgba(245, 245, 245, 0.2)",
-        fg_color = "#666666",
-      },
-      inactive_tab_hover = {
-        bg_color = "rgba(235, 235, 235, 0.3)",
-        fg_color = "#444444",
       },
     }
   end
@@ -67,7 +51,7 @@ local appearance = get_appearance()
 
 
 config.font = wezterm.font 'Martian Mono VF'
-config.font_size = 12.5
+config.font_size = 13.5
 config.freetype_load_target = "Normal"
 config.freetype_render_target = "HorizontalLcd"
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }

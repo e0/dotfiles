@@ -11,9 +11,9 @@ end
 
 local function scheme_for_appearance(appearance)
   if appearance:find 'Dark' then
-    return 'Papercolor Dark (Gogh)'
+    return 'Gruvbox Material (Gogh)'
   else
-    return 'Papercolor Light (Gogh)'
+    return 'Gruvbox (Gogh)'
   end
 end
 

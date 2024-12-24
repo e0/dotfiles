@@ -37,22 +37,12 @@ local function get_tab_bar_colors(appearance)
   end
 end
 
-local function get_font_size(appearance)
-  if appearance:find 'Dark' then
-    return 13.5
-  else
-    return 12.5
-  end
-end
-
 -- Set up an event handler to update colors when appearance changes
 wezterm.on('window-config-reloaded', function(window)
   local appearance = window:get_appearance()
   local colors = get_tab_bar_colors(appearance)
-  local size = get_font_size(appearance)
   window:set_config_overrides({
-    colors = { tab_bar = colors },
-    font_size = size
+    colors = { tab_bar = colors }
   })
 end)
 
@@ -60,8 +50,11 @@ end)
 local appearance = get_appearance()
 
 
-config.font = wezterm.font 'Martian Mono VF'
-config.font_size = get_font_size(appearance)
+config.font = wezterm.font('MartianMono Nerd Font', {
+  weight = "Medium", stretch = "Condensed"
+})
+config.font_size = 14
+config.line_height = 1.2
 config.freetype_load_target = "Normal"
 config.freetype_render_target = "HorizontalLcd"
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }

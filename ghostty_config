@@ -1,0 +1,8 @@
+theme = light:GruvboxLight,dark:gruvbox-material
+unfocused-split-opacity = 1
+font-family = "JetBrains Mono NL"
+font-style = SemiBold
+font-style-bold = Bold
+font-style-italic = SemiBold Italic
+font-style-bold-italic = Bold Italic
+font-size = 15

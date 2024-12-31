@@ -48,6 +48,7 @@ function create_symlinks {
   ln -s ~/dotfiles/zshrc ~/.zshrc
   ln -s ~/dotfiles/nvim ~/.config/nvim
   ln -s ~/dotfiles/wezterm.lua ~/.wezterm.lua
+  ln -s ~/dotfiles/ghostty_config $HOME/Library/Application\ Support/com.mitchellh.ghostty/config
 
   echo -e "\t\tDone."
 }

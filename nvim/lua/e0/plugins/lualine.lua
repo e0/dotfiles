@@ -5,11 +5,12 @@ return {
     local lualine = require("lualine")
 
     local function get_lualine_theme()
-      if vim.o.background == 'light' then
-        return 'gruvbox_light'
-      else
-        return 'gruvbox-material'
-      end
+      return "catppuccin"
+      -- if vim.o.background == 'light' then
+      --   return 'gruvbox_light'
+      -- else
+      --   return 'gruvbox-material'
+      -- end
     end
 
     local options = {

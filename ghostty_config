@@ -1,6 +1,5 @@
 theme = light:catppuccin-latte,dark:catppuccin-mocha
 unfocused-split-opacity = 1
-macos-non-native-fullscreen = visible-menu
 
 font-family = "JetBrains Mono NL"
 font-style = SemiBold

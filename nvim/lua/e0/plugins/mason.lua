@@ -1,7 +1,7 @@
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   dependencies = {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   },
   config = function()
@@ -23,8 +23,8 @@ return {
         "jsonls",
         "rust_analyzer", -- :MasonInstall codelldb
       },
-      -- auto-install configured servers (with lspconfig)
-      automatic_installation = true, -- not the same as ensure_installed
+      -- automatically enable installed servers via vim.lsp.enable()
+      automatic_enable = true, -- this replaces the old automatic_installation option
     })
   end,
 }

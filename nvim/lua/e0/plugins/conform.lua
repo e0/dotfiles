@@ -1,5 +1,6 @@
 return {
   "stevearc/conform.nvim",
+  dependencies = { "williamboman/mason.nvim" },
   config = function()
     local conform = require("conform")
 
@@ -12,7 +13,7 @@ return {
       },
 
       formatters_by_ft = {
-        lua = { "stylua" },
+        -- lua = { "stylua" },
         -- Conform will use the first available formatter in the list
         javascript = { "prettier" },
         typescript = { "prettier" },
@@ -28,16 +29,10 @@ return {
     })
 
     -- Format asynchronously on save
-    vim.api.nvim_create_autocmd("BufWritePost", {
+    vim.api.nvim_create_autocmd("BufWritePre", {
       pattern = "*",
       callback = function(args)
-        require("conform").format({ async = true, lsp_fallback = true, buf = args.buf }, function(err)
-          if not err then
-            vim.api.nvim_buf_call(args.buf, function()
-              vim.cmd.update()
-            end)
-          end
-        end)
+        require("conform").format({ async = false, lsp_fallback = true, buf = args.buf })
       end,
     })
   end,

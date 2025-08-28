@@ -22,6 +22,7 @@ return {
         "pyright",
         "jsonls",
         "rust_analyzer", -- :MasonInstall codelldb
+        "omnisharp",
       },
       -- automatically enable installed servers via vim.lsp.enable()
       automatic_enable = true, -- this replaces the old automatic_installation option

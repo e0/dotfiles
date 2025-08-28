@@ -118,5 +118,21 @@ return {
         },
       },
     })
+
+    -- configure omnisharp server (C#/.NET)
+    -- Note: csharp.nvim plugin handles the primary configuration
+    -- This is a fallback configuration if csharp.nvim is disabled
+    lspconfig["omnisharp"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      cmd = { "omnisharp" },
+      enable_editorconfig_support = true,
+      enable_ms_build_load_projects_on_demand = false,
+      enable_roslyn_analyzers = true,
+      organize_imports_on_format = true,
+      enable_import_completion = true,
+      sdk_include_prereleases = false,
+      analyze_open_documents_only = true,
+    })
   end,
 }
